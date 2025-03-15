@@ -1,1 +1,69 @@
-# Limit-function-in-MySQL
+#   GETTING THE NUMBER OF DESIRED ROWS
+
+USE deff;
+
+SELECT *
+FROM employees;
+
+SELECT *
+FROM salary;
+
+# THE FIRST ROW OF THE EMPLOYEES TABLE
+SELECT *
+FROM employees
+LIMIT 1;
+
+SELECT *
+FROM employees
+LIMIT 2;
+
+SELECT *
+FROM employees
+LIMIT 3;
+
+SELECT *
+FROM salary
+LIMIT 1;
+
+SELECT *
+FROM salary
+LIMIT 2;
+
+SELECT *
+FROM salary
+LIMIT 3;
+
+# SKIPPING THE FIRST ROW TO SEE THE NEXT TWO ROWS;
+
+SELECT *
+FROM employees
+LIMIT 1,2;
+
+SELECT *
+FROM employees
+LIMIT 2, 2;
+
+SELECT *
+FROM salary
+LIMIT 2, 1;
+
+# AFTER SORTING A TABLE AND YOU JUST WANNA SEE THE FIRST ROW;
+SELECT *
+FROM employees
+ORDER BY first_name DESC
+LIMIT 1;
+
+SELECT *
+FROM employees
+ORDER BY first_name ASC
+LIMIT 1;
+
+SELECT *
+FROM salary
+ORDER BY amount DESC
+LIMIT 1;
+
+SELECT *
+FROM salary
+ORDER BY amount ASC
+LIMIT 1;
